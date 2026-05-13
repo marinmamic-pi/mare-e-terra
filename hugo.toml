@@ -1,7 +1,6 @@
 baseURL = "https://marinmamic-pi.github.io/mare-e-terra/"
 languageCode = "en-us"
 title = "Mare e Terra"
-theme = ""
 
 disableKinds = ["section", "taxonomy", "term", "RSS", "sitemap"]
 
