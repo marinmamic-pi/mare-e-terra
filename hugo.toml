@@ -1,0 +1,20 @@
+baseURL = "https://marinmamic-pi.github.io/mare-e-terra/"
+languageCode = "en-us"
+title = "Mare e Terra"
+theme = ""
+
+disableKinds = ["section", "taxonomy", "term", "RSS", "sitemap"]
+
+[params]
+  brand = "Mare e Terra"
+  tagline = "Olive & Stone — Mediterranean stories from sea and land"
+  leadMagnetPdf = "/pdf/the-spring-table.pdf"
+  listmonkUrl = "http://localhost:9000"
+  listmonkListUuid = "af107ab2-4c17-4bca-a63f-784e6896deae"
+  goatcounterVhost = "stats.mare-e-terra.local"
+
+  sage = "#8FBC8F"
+  limestone = "#D4C5A9"
+  oliveWood = "#5C4033"
+  cream = "#FFF8EC"
+  adriaticBlue = "#2C5F7C"

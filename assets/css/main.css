@@ -1,0 +1,105 @@
+/* Mare e Terra — Olive & Stone Brand */
+:root {
+  --sage: #8FBC8F;
+  --limestone: #D4C5A9;
+  --olive-wood: #5C4033;
+  --cream: #FFF8EC;
+  --adriatic-blue: #2C5F7C;
+  --text-dark: #2C2C2C;
+  --text-muted: #6B6B6B;
+  --white: #FFFFFF;
+  --max-width: 720px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  color: var(--text-dark);
+  background: var(--cream);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  color: var(--olive-wood);
+  line-height: 1.25;
+}
+.hero {
+  background: linear-gradient(135deg, var(--cream) 0%, #F0F0E8 100%);
+  padding: 5rem 1.5rem 4rem;
+  text-align: center;
+  border-bottom: 3px solid var(--sage);
+}
+.hero-content { max-width: var(--max-width); margin: 0 auto; }
+.hero-brand {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.875rem;
+  color: var(--sage);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.hero h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--olive-wood); }
+.hero .subtitle { font-size: 1.125rem; color: var(--adriatic-blue); font-style: italic; margin-bottom: 1.5rem; }
+.hero .description {
+  font-size: 1rem; color: var(--text-muted);
+  max-width: 580px; margin: 0 auto 2rem; line-height: 1.8;
+}
+.signup-form {
+  background: var(--white); padding: 0.7rem;
+  border-radius: 8px; display: inline-flex; gap: 0.5rem;
+  box-shadow: 0 2px 12px rgba(92,64,51,0.08);
+  flex-wrap: wrap; justify-content: center; max-width: 500px; margin: 0 auto;
+}
+.signup-form input[type="email"], .signup-form input[type="text"] {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--limestone); border-radius: 6px;
+  font-family: 'Lora', Georgia, serif; font-size: 0.95rem;
+  color: var(--text-dark); background: var(--cream);
+}
+.signup-form input[type="email"] { flex: 1 1 200px; min-width: 200px; }
+.signup-form input[type="text"] { flex: 1 1 180px; min-width: 160px; }
+.signup-form input:focus { outline: none; border-color: var(--adriatic-blue); box-shadow: 0 0 0 3px rgba(44,95,124,0.1); }
+.signup-form button {
+  padding: 0.75rem 1.5rem; background: var(--adriatic-blue);
+  color: var(--white); border: none; border-radius: 6px;
+  font-family: 'Playfair Display', Georgia, serif; font-size: 1rem;
+  font-weight: 700; cursor: pointer; transition: background 0.2s; white-space: nowrap;
+}
+.signup-form button:hover { background: #1A4A66; }
+.lead-magnet { padding: 4rem 1.5rem; text-align: center; background: var(--white); }
+.lead-magnet-inner { max-width: var(--max-width); margin: 0 auto; }
+.lead-magnet h2 { font-size: 1.75rem; margin-bottom: 0.75rem; }
+.lead-magnet .lead-desc { color: var(--text-muted); margin-bottom: 1.5rem; font-size: 1rem; line-height: 1.8; }
+.download-btn {
+  display: inline-block; padding: 0.85rem 2rem; background: var(--sage);
+  color: var(--white); font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.05rem; font-weight: 700; text-decoration: none; border-radius: 8px;
+  transition: background 0.2s;
+}
+.download-btn:hover { background: #7AA87A; }
+.features { padding: 4rem 1.5rem; background: var(--cream); }
+.features-inner { max-width: var(--max-width); margin: 0 auto; text-align: center; }
+.features h2 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+.features .feat-subtitle { color: var(--text-muted); margin-bottom: 2.5rem; font-size: 1rem; }
+.feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
+.feature-card {
+  background: var(--white); padding: 2rem 1.5rem;
+  border-radius: 8px; box-shadow: 0 1px 8px rgba(92,64,51,0.06); text-align: center;
+}
+.feature-card .icon { font-size: 2rem; margin-bottom: 0.75rem; }
+.feature-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--olive-wood); }
+.feature-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
+.site-footer {
+  background: var(--olive-wood); color: var(--cream);
+  padding: 2.5rem 1.5rem; text-align: center;
+}
+.site-footer p { font-size: 0.85rem; opacity: 0.85; line-height: 1.6; }
+.site-footer .brand-name { font-family: 'Playfair Display', Georgia, serif; font-size: 1rem; color: var(--sage); letter-spacing: 3px; text-transform: uppercase; }
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.8rem; } .hero { padding: 3rem 1rem 2.5rem; }
+  .signup-form { flex-direction: column; padding: 0; background: transparent; box-shadow: none; }
+  .signup-form input, .signup-form button { width: 100%; }
+  .feature-grid { grid-template-columns: 1fr; } .lead-magnet { padding: 2.5rem 1rem; }
+}

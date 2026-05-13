@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+  <meta name="description" content="Mediterranean food & culture newsletter — seasonal stories from sea and land.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  {{ $css := resources.Get "css/main.css" }}
+  <style>{{ $css.Content | safeCSS }}</style>
+  {{ if .Site.Params.goatcounterVhost }}
+  <!-- GoatCounter Analytics -->
+  <script data-goatcounter="https://{{ .Site.Params.goatcounterVhost }}/count" async src="//gc.zgo.at/count.js"></script>
+  {{ end }}
+</head>
+<body>
+{{ block "main" . }}{{ end }}
+<footer class="site-footer">
+  <p><span class="brand-name">Mare e Terra</span></p>
+  <p>Olive & Stone — Mediterranean stories from sea and land</p>
+  <p style="margin-top:0.75rem;font-size:0.75rem;">&copy; {{ now.Format "2006" }} Mare e Terra. All rights reserved.</p>
+</footer>
+</body>
+</html>
