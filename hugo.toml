@@ -4,6 +4,11 @@ title = "Mare e Terra"
 
 disableKinds = ["section", "taxonomy", "term", "RSS", "sitemap"]
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [params]
   brand = "Mare e Terra"
   tagline = "Olive & Stone — Mediterranean stories from sea and land"

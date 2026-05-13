@@ -2,9 +2,9 @@
 title: "Issue #1 — Spring on the Adriatic"
 date: 2026-05-18
 draft: false
-layout: single
-type: page
 ---
+
+Issue #1 of Mare e Terra.
 
 <section style="padding:3rem 1.5rem; max-width:720px; margin:0 auto;">
   <p style="font-family:'Playfair Display', Georgia, serif; font-size:0.8rem; color:#8FBC8F; letter-spacing:4px; text-transform:uppercase; margin-bottom:0.5rem;">Mare e Terra · Issue #1</p>
