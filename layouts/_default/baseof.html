@@ -14,6 +14,9 @@
   <!-- GoatCounter Analytics -->
   <script data-goatcounter="https://{{ .Site.Params.goatcounterVhost }}/count" async src="//gc.zgo.at/count.js"></script>
   {{ end }}
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5763391af6994be98d83afb66faf138a"}'></script>
+  <!-- End Cloudflare Web Analytics -->
 </head>
 <body>
 {{ block "main" . }}{{ end }}
