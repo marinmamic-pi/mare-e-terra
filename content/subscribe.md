@@ -4,7 +4,7 @@ date: 2026-05-13
 draft: false
 ---
 
-Welcome to Mare e Terra. Join the table for weekly stories from the Adriatic.
+<div style="display:none;">Mare e Terra — Subscribe page</div>
 
 <section class="hero" style="padding:5rem 1.5rem 4rem;text-align:center;background:linear-gradient(135deg,#FFF8EC 0%,#F0F0E8 100%);border-bottom:3px solid #8FBC8F;">
   <div class="hero-content" style="max-width:720px;margin:0 auto;">
