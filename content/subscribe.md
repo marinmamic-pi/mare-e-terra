@@ -16,10 +16,10 @@ draft: false
       Delivered to your inbox every week. No spam, no tourist traps — just the real Mediterranean table.
     </p>
     <form id="subscribe-form" class="signup-form"
-          action="{{ .Site.Params.listmonkUrl }}/subscription/form"
+          action="http://localhost:9000/subscription/form"
           method="POST" target="listmonk-frame"
           style="background:#FFFFFF;padding:0.7rem;border-radius:8px;display:inline-flex;gap:0.5rem;box-shadow:0 2px 12px rgba(92,64,51,0.08);flex-wrap:wrap;justify-content:center;max-width:500px;margin:0 auto;">
-      <input type="hidden" name="l" value="{{ .Site.Params.listmonkListUuid }}">
+      <input type="hidden" name="l" value="af107ab2-4c17-4bca-a63f-784e6896deae">
       <input type="email" name="email" placeholder="Your email address" required
              style="padding:0.75rem 1rem;border:1px solid #D4C5A9;border-radius:6px;font-family:'Lora',Georgia,serif;font-size:0.95rem;color:#2C2C2C;background:#FFF8EC;flex:1 1 200px;min-width:200px;">
       <input type="text" name="name" placeholder="Your name (optional)"
@@ -65,7 +65,7 @@ draft: false
       Start with our latest issue, or browse the recipe archive.
     </p>
     <p>
-      <a href="/issue/1/" style="display:inline-block;padding:0.75rem 1.5rem;background:#2C5F7C;color:#FFFFFF;text-decoration:none;font-family:'Playfair Display',Georgia,serif;font-size:1rem;font-weight:700;border-radius:6px;margin-right:0.75rem;">Read Issue #1 →</a>
+      <a href="/issue-1/" style="display:inline-block;padding:0.75rem 1.5rem;background:#2C5F7C;color:#FFFFFF;text-decoration:none;font-family:'Playfair Display',Georgia,serif;font-size:1rem;font-weight:700;border-radius:6px;margin-right:0.75rem;">Read Issue #1 →</a>
       <a href="/recipes/" style="display:inline-block;padding:0.75rem 1.5rem;background:#7A9A5A;color:#FFFFFF;text-decoration:none;font-family:'Playfair Display',Georgia,serif;font-size:1rem;font-weight:700;border-radius:6px;">Recipe Archive</a>
     </p>
   </div>
