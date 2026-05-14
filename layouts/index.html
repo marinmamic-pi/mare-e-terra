@@ -18,11 +18,40 @@
       <input type="text" name="name" placeholder="Your name (optional)">
       <button type="submit">Subscribe Free →</button>
     </form>
-    <iframe name="listmonk-frame" style="display:none;"></iframe>
+    <iframe name="listmonk-frame" id="listmonk-frame" style="display:none;"></iframe>
     <div id="form-success" class="form-success">✓ You're subscribed! Check your inbox.</div>
     <div id="form-error" class="form-error">Something went wrong. Please try again.</div>
   </div>
 </section>
+<script>
+(function() {
+  var form = document.getElementById('signup-form');
+  var frame = document.getElementById('listmonk-frame');
+  var success = document.getElementById('form-success');
+  var error = document.getElementById('form-error');
+  success.style.display = 'none';
+  error.style.display = 'none';
+  form.addEventListener('submit', function() {
+    form.querySelector('button').disabled = true;
+    form.querySelector('button').textContent = 'Subscribing…';
+    frame.onload = function() {
+      try {
+        var body = frame.contentDocument.body;
+        if (body.textContent.indexOf('success') > -1 || body.textContent.indexOf('Subscribed') > -1) {
+          form.style.display = 'none';
+          success.style.display = 'block';
+        } else {
+          form.style.display = 'none';
+          error.style.display = 'block';
+        }
+      } catch(e) {
+        form.style.display = 'none';
+        success.style.display = 'block';
+      }
+    };
+  });
+})();
+</script>
 <section class="lead-magnet">
   <div class="lead-magnet-inner">
     <h2>🌿 Free guide: <em>The Spring Table</em></h2>
