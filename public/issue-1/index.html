@@ -1,53 +1,153 @@
----
-title: "Issue #1 — Spring on the Adriatic"
-date: 2026-05-14
-draft: false
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Issue #1 — Spring on the Adriatic — Mare e Terra</title>
+  <meta name="description" content="Mediterranean food & culture newsletter — seasonal stories from sea and land.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  
+  <style>/* Mare e Terra — Olive & Stone Brand */
+:root {
+  --sage: #8FBC8F;
+  --limestone: #D4C5A9;
+  --olive-wood: #5C4033;
+  --cream: #FFF8EC;
+  --adriatic-blue: #2C5F7C;
+  --text-dark: #2C2C2C;
+  --text-muted: #6B6B6B;
+  --white: #FFFFFF;
+  --max-width: 720px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  color: var(--text-dark);
+  background: var(--cream);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  color: var(--olive-wood);
+  line-height: 1.25;
+}
+.hero {
+  background: linear-gradient(135deg, var(--cream) 0%, #F0F0E8 100%);
+  padding: 5rem 1.5rem 4rem;
+  text-align: center;
+  border-bottom: 3px solid var(--sage);
+}
+.hero-content { max-width: var(--max-width); margin: 0 auto; }
+.hero-brand {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.875rem;
+  color: var(--sage);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.hero h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--olive-wood); }
+.hero .subtitle { font-size: 1.125rem; color: var(--adriatic-blue); font-style: italic; margin-bottom: 1.5rem; }
+.hero .description {
+  font-size: 1rem; color: var(--text-muted);
+  max-width: 580px; margin: 0 auto 2rem; line-height: 1.8;
+}
+.signup-form {
+  background: var(--white); padding: 0.7rem;
+  border-radius: 8px; display: inline-flex; gap: 0.5rem;
+  box-shadow: 0 2px 12px rgba(92,64,51,0.08);
+  flex-wrap: wrap; justify-content: center; max-width: 500px; margin: 0 auto;
+}
+.signup-form input[type="email"], .signup-form input[type="text"] {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--limestone); border-radius: 6px;
+  font-family: 'Lora', Georgia, serif; font-size: 0.95rem;
+  color: var(--text-dark); background: var(--cream);
+}
+.signup-form input[type="email"] { flex: 1 1 200px; min-width: 200px; }
+.signup-form input[type="text"] { flex: 1 1 180px; min-width: 160px; }
+.signup-form input:focus { outline: none; border-color: var(--adriatic-blue); box-shadow: 0 0 0 3px rgba(44,95,124,0.1); }
+.signup-form button {
+  padding: 0.75rem 1.5rem; background: var(--adriatic-blue);
+  color: var(--white); border: none; border-radius: 6px;
+  font-family: 'Playfair Display', Georgia, serif; font-size: 1rem;
+  font-weight: 700; cursor: pointer; transition: background 0.2s; white-space: nowrap;
+}
+.signup-form button:hover { background: #1A4A66; }
+.lead-magnet { padding: 4rem 1.5rem; text-align: center; background: var(--white); }
+.lead-magnet-inner { max-width: var(--max-width); margin: 0 auto; }
+.lead-magnet h2 { font-size: 1.75rem; margin-bottom: 0.75rem; }
+.lead-magnet .lead-desc { color: var(--text-muted); margin-bottom: 1.5rem; font-size: 1rem; line-height: 1.8; }
+.download-btn {
+  display: inline-block; padding: 0.85rem 2rem; background: var(--sage);
+  color: var(--white); font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.05rem; font-weight: 700; text-decoration: none; border-radius: 8px;
+  transition: background 0.2s;
+}
+.download-btn:hover { background: #7AA87A; }
+.features { padding: 4rem 1.5rem; background: var(--cream); }
+.features-inner { max-width: var(--max-width); margin: 0 auto; text-align: center; }
+.features h2 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+.features .feat-subtitle { color: var(--text-muted); margin-bottom: 2.5rem; font-size: 1rem; }
+.feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
+.feature-card {
+  background: var(--white); padding: 2rem 1.5rem;
+  border-radius: 8px; box-shadow: 0 1px 8px rgba(92,64,51,0.06); text-align: center;
+}
+.feature-card .icon { font-size: 2rem; margin-bottom: 0.75rem; }
+.feature-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--olive-wood); }
+.feature-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
+.site-footer {
+  background: var(--olive-wood); color: var(--cream);
+  padding: 2.5rem 1.5rem; text-align: center;
+}
+.site-footer p { font-size: 0.85rem; opacity: 0.85; line-height: 1.6; }
+.site-footer .brand-name { font-family: 'Playfair Display', Georgia, serif; font-size: 1rem; color: var(--sage); letter-spacing: 3px; text-transform: uppercase; }
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.8rem; } .hero { padding: 3rem 1rem 2.5rem; }
+  .signup-form { flex-direction: column; padding: 0; background: transparent; box-shadow: none; }
+  .signup-form input, .signup-form button { width: 100%; }
+  .feature-grid { grid-template-columns: 1fr; } .lead-magnet { padding: 2.5rem 1rem; }
+}
+</style>
+  
+  
+  <script data-goatcounter="https://stats.mare-e-terra.local/count" async src="//gc.zgo.at/count.js"></script>
+  
+  
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5763391af6994be98d83afb66faf138a"}'></script>
+  
+</head>
+<body>
 
-Issue #1 of Mare e Terra.
-
+<p>Issue #1 of Mare e Terra.</p>
 <section style="padding:3rem 1.5rem; max-width:720px; margin:0 auto;">
   <p style="font-family:'Playfair Display', Georgia, serif; font-size:0.8rem; color:#8FBC8F; letter-spacing:4px; text-transform:uppercase; margin-bottom:0.5rem;">Mare e Terra · Issue #1</p>
   <p style="font-size:0.85rem; color:#2C5F7C; margin-bottom:1.5rem;">Week of May 18, 2026</p>
-
   <h1 style="font-family:'Playfair Display', Georgia, serif; font-size:2rem; font-weight:700; color:#5C4033; line-height:1.25; margin-bottom:1.5rem;">Spring on the Adriatic — Wild Asparagus &amp; the First Olive Oil</h1>
-
   <h2 style="font-family:'Playfair Display', Georgia, serif; font-size:1.25rem; font-weight:700; color:#5C4033; margin:1.5rem 0 0.75rem;">Editor's Letter</h2>
-
   <p style="margin-bottom:1rem; line-height:1.8;">Dear reader,</p>
-
   <p style="margin-bottom:1rem; line-height:1.8;">May on the Adriatic is a season of thresholds. The last of the spring rains have swept through, the mornings still carry a chill from the mountains, and the sea — that impossible blue-green — is warming slowly, reluctantly, as if it knows summer will demand everything of it.</p>
-
   <p style="margin-bottom:1rem; line-height:1.8;">But here, in the olive groves between Zadar and Šibenik, something quieter is happening. The wild asparagus is pushing through the limestone cracks. The first tender leaves of the olive trees are catching light. And in the kitchens of every coastal town, the real cooking is just beginning.</p>
-
   <p style="margin-bottom:1rem; line-height:1.8;">This is what Mare e Terra is about. Not the Mediterranean you see on postcards — the one of endless sun and tourist marinas — but the one the people who live here know. The seasonal one. The one where you eat what grows when it grows, where a meal tells you what month it is, and where the table is the place where sea and land meet.</p>
-
   <p style="margin-bottom:1.5rem; line-height:1.8;">Welcome to Issue #1.</p>
-
   <p style="margin-bottom:2rem; color:#6B6B6B; font-style:italic;">— Elena</p>
-
   <h2 style="font-family:'Playfair Display', Georgia, serif; font-size:1.25rem; font-weight:700; color:#5C4033; margin:1.5rem 0 0.75rem;">The Wild Asparagus of the Dalmatian Karst</h2>
-
   <p style="margin-bottom:1rem; line-height:1.8;">The limestone hills of Dalmatia do not give up their gifts easily. Centuries of wind and salt have sculpted them into something stark and beautiful — grey rock breaking through thin soil, gnarled olive trees bent at improbable angles, and there, in the crevices, the first green shoots of wild asparagus.</p>
-
   <p style="margin-bottom:1rem; line-height:1.8;"><em>Asparagus acutifolius</em>. The locals call it <em>divlji šparog</em>, and in May, it is the most prized thing you can forage. Its stalks are thinner than the fat, cultivated asparagus you find in supermarkets — almost pencil-thin — and its flavour is entirely different: sharper, earthier, with a bitterness that tells you it grew from stone.</p>
-
   <p style="margin-bottom:1rem; line-height:1.8;">The tradition of foraging wild asparagus is as old as the olive trees themselves. Every coastal family has their spot — a forgotten corner of someone's uncle's grove, a strip of land between two vineyards, a hillside facing the sea where the sun hits just right. The knowledge passes down: <em>this is the week they'll appear</em>; <em>check under the old pine</em>; <em>don't take everything, leave some for next year</em>.</p>
-
   <p style="margin-bottom:1rem; line-height:1.8;">This is not romantic foraging for Instagram. It is practical, seasonal eating — the same impulse that drives every Mediterranean kitchen. When something is in season, you eat it. When it's gone, you wait.</p>
-
   <h3 style="font-family:'Playfair Display', Georgia, serif; font-size:1.1rem; font-weight:700; color:#5C4033; margin:1.5rem 0 0.5rem;">The First Olive Oil</h3>
-
   <p style="margin-bottom:1rem; line-height:1.8;">At the same time, in the pantries and cellars of the Adriatic, another transformation is underway. The olive oil pressed in November has been settling for six months. The initial aggression — that peppery burn at the back of the throat — has softened into something round and green. It is now, in May, that last year's harvest reveals its true character.</p>
-
   <p style="margin-bottom:1rem; line-height:1.8;">"Novo ulje" — new oil — is celebrated in November with tastings and festivals. But ask any Dalmatian cook what they reach for in spring, and they'll tell you: last year's oil, now mellowed, is the real workhorse. It dresses the wild asparagus, it anoints the early tomatoes, it finishes the grilled fish that signals the return of outdoor cooking.</p>
-
   <h3 style="font-family:'Playfair Display', Georgia, serif; font-size:1.1rem; font-weight:700; color:#5C4033; margin:1.5rem 0 0.5rem;">A Brief History</h3>
-
   <p style="margin-bottom:1rem; line-height:1.8;">Wild asparagus appears in Pliny the Elder's <em>Natural History</em> (AD 77), where he notes the best grows in the sandy soils of Ravenna. The Roman cookbook <em>Apicius</em> includes a recipe for it — boil, dress with oil and fish sauce, serve.</p>
-
   <p style="margin-bottom:1rem; line-height:1.8;">But the real story is simpler. For millennia, the appearance of wild asparagus marked the turning point between winter scarcity and spring abundance. It was the first fresh green after months of preserved food — salted fish, pickled vegetables, dried meats. In Dalmatia, the tradition continues unchanged. The <em>šparog</em> is foraged, bundled, and sold at morning markets in Zadar, Šibenik, Trogir.</p>
-
   <!-- Recipe box -->
   <div style="background-color:#FFF8EC; border-left:3px solid #D4C5A9; padding:1rem 1.25rem; margin:1.5rem 0; border-radius:0 4px 4px 0;">
     <p style="font-family:'Playfair Display', Georgia, serif; font-size:0.7rem; font-weight:700; color:#2C5F7C; letter-spacing:2px; text-transform:uppercase; margin-bottom:0.5rem;">Recipe of the Week</p>
@@ -57,9 +157,7 @@ Issue #1 of Mare e Terra.
     <p style="font-size:0.9rem; line-height:1.7;"><strong>Ingredients:</strong> 200g wild asparagus (or thin cultivated), 4 eggs, 30g Pecorino/Parmesan, 2 tbsp olive oil, salt, pepper, lemon.</p>
     <p style="font-size:0.9rem; line-height:1.7;"><strong>Method:</strong> Blanch asparagus 2 min. Whisk eggs with cheese. Heat oil in non-stick skillet, cook asparagus 1 min. Pour eggs over, cook on low 4-5 min. Finish under grill 1-2 min. Lemon squeeze on top. Serve warm with bread.</p>
   </div>
-
   <h2 style="font-family:'Playfair Display', Georgia, serif; font-size:1.25rem; font-weight:700; color:#5C4033; margin:1.5rem 0 0.75rem;">What's in Season Now</h2>
-
   <ul style="font-size:0.95rem; line-height:2; color:#2C2C2C; padding-left:1.25rem;">
     <li><strong>Wild asparagus</strong> — Now through early June</li>
     <li><strong>Spring garlic</strong> — Now</li>
@@ -69,19 +167,23 @@ Issue #1 of Mare e Terra.
     <li><strong>Wild strawberries</strong> — Late May</li>
     <li><strong>Artichokes (last of)</strong> — Now</li>
   </ul>
-
   <h2 style="font-family:'Playfair Display', Georgia, serif; font-size:1.25rem; font-weight:700; color:#5C4033; margin:1.5rem 0 0.75rem;">From Our Table</h2>
-
   <p style="margin-bottom:0.5rem; line-height:1.8;"><strong>🫒 Olive oil:</strong> OPG Šimuni, Pag — <em>Buža</em> variety, November 2025 harvest. Green, grassy, finish of almond.</p>
   <p style="margin-bottom:0.5rem; line-height:1.8;"><strong>📖 Book:</strong> <em>The Magic of the Adriatic</em> by Hrvoje Šošić — Dalmatian food culture through a single fishing village.</p>
   <p style="margin-bottom:1.5rem; line-height:1.8;"><strong>🎬 Film:</strong> <em>A Chef's Journey: Dalmatia</em> (YouTube, 2024) — foraging, fishing, cooking along the Makarska Riviera.</p>
-
   <p style="margin-bottom:1rem; line-height:1.8;">Spring on the Adriatic is fleeting. The wild asparagus will be gone in three weeks. The wild strawberries in two. That is the gift of seasonal eating — you never get bored, because the food keeps changing.</p>
-
   <p style="margin-bottom:0.25rem;">Until next week,</p>
   <p style="margin-bottom:2rem; color:#6B6B6B; font-style:italic;">— Elena &amp; the Mare e Terra team</p>
-
   <p style="text-align:center; margin:2rem 0;">
     <a href="/" style="display:inline-block; padding:0.75rem 1.5rem; background-color:#2C5F7C; color:#FFFFFF; text-decoration:none; font-family:'Playfair Display', Georgia, serif; font-size:0.95rem; font-weight:700; border-radius:6px;">← Back to Mare e Terra</a>
   </p>
 </section>
+
+
+<footer class="site-footer">
+  <p><span class="brand-name">Mare e Terra</span></p>
+  <p>Olive & Stone — Mediterranean stories from sea and land</p>
+  <p style="margin-top:0.75rem;font-size:0.75rem;">&copy; 2026 Mare e Terra. All rights reserved.</p>
+</footer>
+</body>
+</html>
