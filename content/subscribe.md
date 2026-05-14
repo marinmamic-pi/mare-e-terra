@@ -16,7 +16,7 @@ draft: false
       Delivered to your inbox every week. No spam, no tourist traps — just the real Mediterranean table.
     </p>
     <form id="subscribe-form" class="signup-form"
-          action="http://localhost:9000/subscription/form"
+          action="https://newsletters-feb-affair-campaign.trycloudflare.com/subscription/form"
           method="POST" target="listmonk-frame"
           style="background:#FFFFFF;padding:0.7rem;border-radius:8px;display:inline-flex;gap:0.5rem;box-shadow:0 2px 12px rgba(92,64,51,0.08);flex-wrap:wrap;justify-content:center;max-width:500px;margin:0 auto;">
       <input type="hidden" name="l" value="af107ab2-4c17-4bca-a63f-784e6896deae">

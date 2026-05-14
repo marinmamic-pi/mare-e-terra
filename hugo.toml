@@ -13,7 +13,7 @@ disableKinds = ["section", "taxonomy", "term", "RSS", "sitemap"]
   brand = "Mare e Terra"
   tagline = "Olive & Stone — Mediterranean stories from sea and land"
   leadMagnetPdf = "/pdf/the-spring-table.pdf"
-  listmonkUrl = "http://localhost:9000"
+  listmonkUrl = "https://newsletters-feb-affair-campaign.trycloudflare.com"
   listmonkListUuid = "af107ab2-4c17-4bca-a63f-784e6896deae"
   goatcounterVhost = "stats.mare-e-terra.local"
 
